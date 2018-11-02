@@ -58,7 +58,6 @@ int NoLockRing::push(uint32_t size, void *buf)
 
 int NoLockRing::push(void *buf)
 {
-    
     return push(1, buf);
 }
 
