@@ -256,7 +256,7 @@ void NoLockRing::savePtr(void *dst, void **src, uint32_t dstIndex, uint32_t srcI
     {
         uint32_t *pdst = reinterpret_cast<uint32_t*>(dst);
         uint32_t **psrc = reinterpret_cast<uint32_t**>(src);
-        //pdst[dstIndex] = reinterpret_cast<uint32_t*>(psrc[srcIndex]); 
+        pdst[dstIndex] = reinterpret_cast<uint32_t>(psrc[srcIndex]); 
     }   
 }
 
@@ -272,6 +272,6 @@ void NoLockRing::savePtr(void **dst, void *src, uint32_t dstIndex, uint32_t srcI
     {
         uint32_t **pdst = reinterpret_cast<uint32_t**>(dst);
         uint32_t *psrc = reinterpret_cast<uint32_t*>(src);
-        //pdst[dstIndex] = reinterpret_cast<uint32_t*>(psrc[srcIndex]); 
+        pdst[dstIndex] = reinterpret_cast<uint32_t*>(psrc[srcIndex]); 
     }  
 }
