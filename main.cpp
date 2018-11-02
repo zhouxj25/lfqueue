@@ -110,11 +110,11 @@ int cons(const string &num, NoLockRing *ring)
 int main()
 {
 	NoLockRing *ring = new NoLockRing(1024, RING_MP | RING_MC);
-    if (!ring)
-    {
-        cerr << "new ring error" << endl;
-        return -1;
-    }
+    	if (!ring)
+    	{
+        	cerr << "new ring error" << endl;
+        	return -1;
+    	}
 	if (ring->init())
 	{
 		delete ring;
