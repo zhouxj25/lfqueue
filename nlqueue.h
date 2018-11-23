@@ -1,5 +1,9 @@
-#ifndef NLQUEUE_H
-#define NLQUEUE_H
+/*
+ * lock free queue, even can lock the specified key avoid be update or delete.
+ * @author zhouxj
+ * @version 1.0, 2018-11-23
+ */
+#pragma once
 #include <atomic>
 #include <cstdint>
 using namespace std;
@@ -61,6 +65,3 @@ private:
         HeadTail    m_cons; //cons head/tail values
         void*       m_buf;  //pointers buffer
 };
-
-
-#endif
