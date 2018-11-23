@@ -1,7 +1,7 @@
 /*
  * lock free queue, even can lock the specified key avoid be update or delete.
  * @author zhouxj
- * @version 1.0, 2018-11-23
+ * @version 1.0, 2018-11-01
  */
 #pragma once
 #include <atomic>
