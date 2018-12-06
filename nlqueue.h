@@ -41,18 +41,25 @@ public:
 private:
         //aligns input parameter to the next power of 2
         uint32_t align32pow2(uint32_t size);
+        
         //update the prod head for enqueue
         uint32_t updateProdHead(uint32_t size, uint32_t &oldHead, uint32_t &newHead);
+        
         //update the cons head for dequeue
         uint32_t updateConsHead(uint32_t size, uint32_t &oldHead, uint32_t &newHead);
+        
         //prod enqueue functions, the enqueue of pointers on the ring
         void updateProdData(void **data, uint32_t head, uint32_t size);
+        
         //cons dequeue functions, the actuual copy of pointers on the ring to data
         void updateConsData(void **data, uint32_t head, uint32_t size);
+        
         //update the prod tail for enqueue
         void updateProdTail(uint32_t oldHead, uint32_t newHead);
+        
         //update the cons tail for dequeue
         void updateConsTail(uint32_t oldHead, uint32_t newHead);
+        
         //copy pointers functions
         void savePtr(void *dst, void **src, uint32_t dstIndex, uint32_t srcIndex);
 
